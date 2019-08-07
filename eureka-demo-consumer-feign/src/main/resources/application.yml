@@ -1,0 +1,10 @@
+server:
+   port: 9002
+spring:
+# 服务与服务之间相互调用一般都是根据这个name 。
+   application:
+      name: springcloud-eureka-serviceconsumer-feign
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:7000/eureka/

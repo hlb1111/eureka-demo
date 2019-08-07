@@ -1,0 +1,21 @@
+spring:
+   application:
+      name: demo-gate
+server:
+   port: 9200
+   
+eureka:
+   client:
+      service-url:
+         defaultZone: http://localhost:7000/eureka
+   instance:
+      prefer-ip-address: true
+
+zuul:
+   routes:
+      route_1:
+         path: /order/**
+         serviceId: EUREKA-PRODUCER
+#      route_2:
+#         path: /msg/**
+#         serviceId: MESSAGE_PRODUCER
